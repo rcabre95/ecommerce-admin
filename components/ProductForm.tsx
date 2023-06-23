@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 
-export default function ProductForm({ _id, title:existingTitle, description:existingDescription, price:existingPrice}: { _id?: string, title?: string, description?: string, price?: number}) {
+export default function ProductForm({ _id, title:existingTitle, description:existingDescription, price:existingPrice, images}: { _id?: string, title?: string, description?: string, price?: number, images: Array<any>}) {
 
     const [title, setTitle] = useState(existingTitle || '');
     const [description, setDescription] = useState(existingDescription || '');
@@ -40,6 +40,10 @@ export default function ProductForm({ _id, title:existingTitle, description:exis
             value={title}
             onChange={event => { setTitle(event.target.value) }}
             />
+            <label>Photos</label>
+            <div>
+
+            </div>
             <label htmlFor="">Description</label>
             <textarea placeholder='Description'
             value={description}
