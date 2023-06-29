@@ -9,7 +9,13 @@ const nextConfig = {
         hostname: 'lh3.googleusercontent.com',
         port: '',
         pathname: '/a/**'
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'raphael-nextjs-ecommerce.s3.amazonaws.com',
+        port: '',
+        pathname: '/**'
+      },
     ]
   }
 }
